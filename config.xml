@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<cam_param>
+		<cam_sum>1</cam_sum>
+		<cam_ip_1>128.64.6.201</cam_ip_1>
+		<data_port>8000</data_port>
+		<cmd_port>35000</cmd_port>
+	</cam_param>
+
+	<upload_param>
+		<!--car info(moto through/illegal)-->
+		<need_upload>0</need_upload>
+		<data_center_ip>128.64.6.240</data_center_ip>
+		<data_center_port>8888</data_center_port>
+		<!--road status-->
+		<road_status_device_num>2</road_status_device_num>
+		<road_status_ip_1>128.64.6.240</road_status_ip_1>
+		<road_status_port_1>8888</road_status_port_1>
+		<road_status_ip_2>128.64.6.240</road_status_ip_2>
+		<road_status_port_2>8888</road_status_port_2>
+	</upload_param>
+
+	<connect_param>
+		<expire>60</expire>
+		<reconnect_delay>3</reconnect_delay>
+		<reconnect_num>3</reconnect_num>
+	</connect_param>
+
+	<ipc_param>
+		<eth0>128.64.6.100</eth0>
+		<eth1>192.168.2.30</eth1>
+		<pic_path>/data/GKJManager/datadisk/Image</pic_path>
+	</ipc_param>
+
+	<road_info>
+		<number>24749</number>
+		<name>内环高架外圈杨高中路（张杨路）出口路段</name>
+		<lane_num>2</lane_num>
+		<speed_limit>60</speed_limit>
+		<need_feature>1</need_feature>
+		<!--1:need 0:needn't-->
+		<need_track>0</need_track>
+		<!--match image and track
+			1:need 0:needn't-->
+		<need_match>0</need_match>
+		<!--1:need 0:needn't-->
+		<need_db_analysis>0</need_db_analysis>
+		<abnormal_speed>250</abnormal_speed>
+	</road_info>
+
+	<database_info>
+		<host>127.0.0.1</host>
+		<name>DMLPDB</name>
+		<user>root</user>
+		<passwd>12345</passwd>
+	</database_info>
+
+	<font_param>
+		<library>./simsun.ttc</library>
+		<size>96</size>
+		<dpi>72</dpi>
+		<bottom_space>5</bottom_space>
+	</font_param>
+
+	<!--Color Table-->
+	<!--
+		Color	Code
+		white	0
+		black	1
+		red		2
+		green	3
+		blue	4
+		yellow	5
+	-->
+	<color_param>
+		<margin>0</margin>
+		<pen_primary>0</pen_primary>
+		<pen_secondary>5</pen_secondary>
+	</color_param>
+
+	<pic_param>
+		<feature_width>1296</feature_width>
+		<feature_height>968</feature_height>
+		<feature_x2_offset>648</feature_x2_offset>
+		<feature_y2_offset>484</feature_y2_offset>
+		<!--0: no rotation
+			1: clockwise rotation
+			2: counterclockwise rotation-->
+		<rotate_mode>0</rotate_mode>
+	</pic_param>
+
+	<!--rect coordinate-->
+	<!--
+		1:(x1,y1)		2:(x2,y2)
+
+		3:(x3,y3)		4:(x4,y4)
+	-->
+	<detect_param>
+		<!--rect for border detection-->
+		<!--border rect (clockwise: 1->2->3->4)-->
+		<border_x1>0</border_x1>
+		<border_y1>600</border_y1>
+		<border_x2>2750</border_x2>
+		<border_y2>600</border_y2>
+		<border_x3>2750</border_x3>
+		<border_y3>2208</border_y3>
+		<border_x4>0</border_x4>
+		<border_y4>2208</border_y4>
+
+		<!--preset parameter for matrix transformation-->
+		<!--coordinate on the spot (clockwise: 1->2->3->4)-->
+		<spot_coord_x1>1650</spot_coord_x1>
+		<spot_coord_y1>627</spot_coord_y1>
+		<spot_coord_x2>2727</spot_coord_x2>
+		<spot_coord_y2>627</spot_coord_y2>
+		<spot_coord_x3>2647</spot_coord_x3>
+		<spot_coord_y3>2089</spot_coord_y3>
+		<spot_coord_x4>69</spot_coord_x4>
+		<spot_coord_y4>2005</spot_coord_y4>
+		<spot_height>33</spot_height>
+		<spot_width>8</spot_width>
+		<speed_factor>0.9</speed_factor>
+
+		<!--rect for lane locate-->
+		<rect_num>2</rect_num>
+		<!--detection rect 1 (clockwise: 1->2->3->4)-->
+		<rect_1_x1>1647</rect_1_x1>
+		<rect_1_y1>629</rect_1_y1>
+		<rect_1_x2>2259</rect_1_x2>
+		<rect_1_y2>627</rect_1_y2>
+		<rect_1_x3>1195</rect_1_x3>
+		<rect_1_y3>2208</rect_1_y3>
+		<rect_1_x4>0</rect_1_x4>
+		<rect_1_y4>2208</rect_1_y4>
+		<!--detection rect 2 (clockwise: 1->2->3->4)-->
+		<rect_2_x1>2259</rect_2_x1>
+		<rect_2_y1>627</rect_2_y1>
+		<rect_2_x2>2723</rect_2_x2>
+		<rect_2_y2>627</rect_2_y2>
+		<rect_2_x3>2752</rect_2_x3>
+		<rect_2_y3>2208</rect_2_y3>
+		<rect_2_x4>1195</rect_2_x4>
+		<rect_2_y4>2208</rect_2_y4>
+		<!--detection rect 3 (clockwise: 1->2->3->4)-->
+		<rect_3_x1>1335</rect_3_x1>
+		<rect_3_y1>700</rect_3_y1>
+		<rect_3_x2>1520</rect_3_x2>
+		<rect_3_y2>700</rect_3_y2>
+		<rect_3_x3>2300</rect_3_x3>
+		<rect_3_y3>2150</rect_3_y3>
+		<rect_3_x4>1470</rect_3_x4>
+		<rect_3_y4>2150</rect_3_y4>
+		<!--detection rect 4 (clockwise: 1->2->3->4)-->
+		<rect_4_x1>1650</rect_4_x1>
+		<rect_4_y1>900</rect_4_y1>
+		<rect_4_x2>2150</rect_4_x2>
+		<rect_4_y2>900</rect_4_y2>
+		<rect_4_x3>2700</rect_4_x3>
+		<rect_4_y3>1830</rect_4_y3>
+		<rect_4_x4>2300</rect_4_x4>
+		<rect_4_y4>2150</rect_4_y4>
+	</detect_param>
+
+	<tech_param>
+		<!--statistics cycle road occupancy [unit: sec]-->
+		<stats_cycle>60</stats_cycle>
+		<!--sample frequency of speed measurement [unit: msec]-->
+		<sample_freq>300</sample_freq>
+		<!--pixels between track point for speed calculate-->
+		<track_distance>150</track_distance>
+		<!--try count of image match queue, 
+			if overflow then remove the saved image info from image match queue-->
+		<match_try_cnt>1000</match_try_cnt>
+		<!--compress ratio,
+			the higher ration sets, the higher quality JPEG picture is-->
+		<jpg_quality>50</jpg_quality>
+		<!--secondary recognition,
+			0: no need
+			1: plate & type recog
+			2: plate recog
+			3: type recog-->
+		<sec_recog>2</sec_recog>
+		<!--recognition mode,
+			0: car head
+			1: car tail-->
+		<recog_mode>0</recog_mode>
+		<!--1: ban blue plate
+			2: ban yellow plate
+			3: ban all plate-->
+		<ban_truck_mode>3</ban_truck_mode>
+		<!--random min and max-->
+		<rand_speed_min>40</rand_speed_min>
+		<rand_speed_max>70</rand_speed_max>
+		<rand_occupy_min>60</rand_occupy_min>
+		<rand_occupy_max>90</rand_occupy_max>
+	</tech_param>
+
+	<illegal_type_map>
+		<moto_through>0-0</moto_through>
+		<overspeed>1-1</overspeed>
+		<interval_overspeed>2-2</interval_overspeed>
+		<comity_pedestrian>3-3</comity_pedestrian>
+		<red_light>4-4</red_light>
+		<zebra_strip>5-5</zebra_strip>
+		<ban_pass_default>11-11</ban_pass_default>
+		<ban_pass_not_shanghai>90-90</ban_pass_not_shanghai>
+		<ban_pass_truck>14-14</ban_pass_truck>
+		<change_lane>5-5</change_lane>
+		<ban_pass_emission_0>12-12</ban_pass_emission_0>
+		<ban_pass_emission_1>13-13</ban_pass_emission_1>
+		<ban_pass_emission_2>16-16</ban_pass_emission_2>
+		<ban_pass_emission_3>15-15</ban_pass_emission_3>
+		<wrong_lane_default>23-23</wrong_lane_default>
+		<big_occupy_small>24-24</big_occupy_small>
+		<crossing_retention>31-31</crossing_retention>
+		<emergency_lane>32-32</emergency_lane>
+		<alternate_pass>91-91</alternate_pass>
+		<illegal_parking>99-99</illegal_parking>
+	</illegal_type_map>
+
+	<black_list>
+		<!--black list mode,
+			0: off
+			1: on-->
+		<mode>0</mode>
+		<!--type,
+			0: inactive
+			not 0: active-->
+		<ban_pass_emission_0>0</ban_pass_emission_0>
+		<ban_pass_emission_1>0</ban_pass_emission_1>
+		<ban_pass_emission_2>0</ban_pass_emission_2>
+		<ban_pass_emission_3>0</ban_pass_emission_3>
+		<ban_pass_truck_local>95</ban_pass_truck_local>
+	</black_list>
+
+	<maintain_param>
+		<is_need_debug>1</is_need_debug>
+		<main_log>./main.log</main_log>
+		<debug_image_data>./debug_image_data.log</debug_image_data>
+		<debug_archive>./debug_archive.log</debug_archive>
+		<debug_sec_recog>./debug_sec_recog.log</debug_sec_recog>
+		<debug_video_name>./debug_video_name.log</debug_video_name>
+		<debug_road_status>./debug_road_status.log</debug_road_status>
+	</maintain_param>
+</root>
